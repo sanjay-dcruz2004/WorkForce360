@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee - WorkForce360</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-teal-600 text-white p-4 fixed top-0 w-full z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold flex items-center">
+                <i class="bi bi-building mr-2"></i>
+                WorkForce360 
+            </h1>
+            <div class="flex items-center gap-4">
+                <span id="currentTime" class="font-mono text-sm"></span>
+                <div class="relative group">
+                    <i class="bi bi-person-circle text-2xl cursor-pointer"></i>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden group-hover:block">
+                        <div class="p-2 border-b">
+                            <p class="font-semibold">John Doe</p>
+                            <p class="text-sm text-gray-500">Employee ID: EMP001</p>
+                        </div>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Profile</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto flex flex-col md:flex-row gap-6 p-4 mt-16">
+        <!-- Sidebar -->
+        <aside class="sidebar bg-white rounded-lg shadow-lg w-full md:w-64 p-4">
+            <nav class="space-y-2">
+                <a href="Employee.html" class="block p-2 rounded bg-teal-600 text-white"><i class="bi bi-calendar-check mr-2"></i> Dashboard</a>
+                <a href="LeaveRequest.html" class="block p-2 rounded hover:bg-teal-50 text-teal-600"><i class="bi bi-people mr-2"></i> Leave Request</a>
+                <a href="attendance.html" class="block p-2 rounded hover:bg-teal-50 text-teal-600"><i class="bi bi-calendar-check mr-2"></i> Attendance</a>
+                <a href="analytic.html" class="block p-2 rounded hover:bg-teal-50 text-teal-600"><i class="bi bi-bar-chart mr-2"></i> Analytics</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 space-y-6 main-content">
+            <!-- Quick Actions -->
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 bg-teal-100 text-teal-700 rounded-lg hover:bg-teal-200">
+                        <i class="bi bi-plus-circle mr-2"></i>Request Leave
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-500 flex items-center gap-2">
+                        <i class="bi bi-clock-history text-teal-600"></i>
+                        Attendance Rate
+                    </h3>
+                    <p class="text-2xl font-bold text-teal-600">98%</p>
+                    <div class="mt-2 h-2 bg-gray-200 rounded-full">
+                        <div class="h-2 bg-teal-600 rounded-full" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-500 flex items-center gap-2">
+                        <i class="bi bi-calendar2-week text-teal-600"></i>
+                        Leave Balance
+                    </h3>
+                    <p class="text-2xl font-bold text-teal-600">12 days</p>
+                    <p class="text-sm text-gray-500">Out of 15 annual leaves</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-gray-500 flex items-center gap-2">
+                        <i class="bi bi-star-fill text-teal-600"></i>
+                        Performance Score
+                    </h3>
+                    <p class="text-2xl font-bold text-teal-600">4.5/5</p>
+                    <div class="flex text-yellow-400 text-lg">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <i class="bi bi-activity text-teal-600"></i>
+                    Recent Activity
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b pb-2">
+                        <div>
+                            <p class="font-semibold">Attendance Marked</p>
+                            <p class="text-sm text-gray-500">Today, 9:00 AM</p>
+                        </div>
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">On Time</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-2">
+                        <div>
+                            <p class="font-semibold">Leave Request</p>
+                            <p class="text-sm text-gray-500">Dec 25, 2023</p>
+                        </div>
+                        <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Pending</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b pb-2">
+                        <div>
+                            <p class="font-semibold">Performance Review</p>
+                            <p class="text-sm text-gray-500">Quarterly Review Completed</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Completed</span>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
