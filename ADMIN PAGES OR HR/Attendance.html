@@ -20,12 +20,26 @@
 <body class="bg-gray-50">
 
     <!-- Header -->
-    <nav class="bg-teal-600 text-white p-4 fixed top-0 w-full z-50">
+    <nav class="bg-teal-600 text-white p-4 fixed top-0 w-full z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold flex items-center">
                 <i class="bi bi-building mr-2"></i>
                 WorkForce360 
             </h1>
+            <div class="flex items-center gap-4">
+                <span id="currentTime" class="font-mono text-sm"></span>
+                <div class="relative group">
+                    <i class="bi bi-person-circle text-2xl cursor-pointer"></i>
+                    <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg hidden group-hover:block">
+                        <div class="p-2 border-b">
+                            <p class="font-semibold text-gray-500">John Doe</p>
+                            <p class="text-sm text-gray-500">HR ID: HR001</p>
+                        </div>
+                        <a href="Admin.html" class="block px-4 py-2 text-blue-500 hover:bg-gray-100">Profile</a>
+                        <a href="LandingPage.html" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Logout</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
